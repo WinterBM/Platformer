@@ -39,15 +39,13 @@ while True:
     displaysurface.fill((0,0,0))
     ## Calculate forces
     P1.move(g, ACC, fric)
-    if P1.pos.x > width*0.7:
-        for entity in object_sprites:
-            entity.move(ACC,fric, "right")
+    for entity in object_sprites:
+        entity.move(ACC,fric, P1, width)
     P1.update(object_sprites)
 
     ## Draw sprites
     for entity in all_sprites:
         displaysurface.blit(entity.surf, entity.rect)
         
-
     pygame.display.update()
     FramesPerSec.tick(fps)
