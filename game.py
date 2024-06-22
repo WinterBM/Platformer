@@ -38,13 +38,12 @@ while True:
 
     displaysurface.fill((0,0,0))
     ## Calculate forces
-    if P1.pos.x < 0.2*width:        
+    if P1.pos.x < 0.2*width:
         for entity in object_sprites:
-            entity.move(ACC,fric, "left", P1)
+            entity.move(ACC, fric, P1, width, "left")
     if P1.pos.x > 0.8*width:
         for entity in object_sprites:
-            entity.move(ACC,fric, "right", P1)
-
+            entity.move(ACC, fric, P1, width, "right")
     P1.move(g, ACC, fric)
     P1.update(object_sprites)
 
