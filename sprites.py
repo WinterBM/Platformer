@@ -1,3 +1,4 @@
+import sys
 import pygame
 from pygame.locals import *
 
@@ -81,29 +82,24 @@ class Platform(pygame.sprite.Sprite):
         self.vel = vec(0,0)
         self.pos = vec(position)
     
-    def move(self, ACC:float, fric:float, player, width, direct):
+    def move(self, ACC:float, fric:float):
         """
         Implements movement of platform sprites when
         player reaches screen border
 
         :param ACC float: acceleration
         :param fric float: friction
-        :player Player: player object
-        :width int: display width
+        :direct str: direction of movement
         """
         
         pressed_keys = pygame.key.get_pressed()
                 
         ## Acceleration events
         self.acc = vec(0,0)
-        if pressed_keys[K_LEFT] and direct == "left":
+        if pressed_keys[K_LEFT]:
             self.acc.x = ACC
-            player.pos.x = 0.2*width
-            player.vel.x = 0
-        if pressed_keys[K_RIGHT] and direct == "right":
+        if pressed_keys[K_RIGHT]:
             self.acc.x = -ACC
-            player.pos.x = 0.8*width
-            player.vel.x = 0
         
         ## Equations of motion
         self.acc += self.vel * fric

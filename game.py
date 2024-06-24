@@ -1,5 +1,4 @@
 # Libraries
-import sys
 from sprites import *
 
 # Initiaze and set constants
@@ -38,12 +37,17 @@ while True:
 
     displaysurface.fill((0,0,0))
     ## Calculate forces
+    ### Screen Movement
     if P1.pos.x < 0.2*width:
         for entity in object_sprites:
-            entity.move(ACC, fric, P1, width, "left")
+            entity.move(ACC, fric)
+            P1.pos.x = 0.2*width
     if P1.pos.x > 0.8*width:
         for entity in object_sprites:
-            entity.move(ACC, fric, P1, width, "right")
+            entity.move(ACC, fric)
+            P1.pos.x = 0.8*width
+
+    ### Player movement
     P1.move(g, ACC, fric)
     P1.update(object_sprites)
 
