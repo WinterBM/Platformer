@@ -38,14 +38,8 @@ while True:
     displaysurface.fill((0,0,0))
     ## Calculate forces
     ### Screen Movement
-    if P1.pos.x < 0.2*width:
-        for entity in object_sprites:
-            entity.move(ACC, fric)
-            P1.pos.x = 0.2*width
-    if P1.pos.x > 0.8*width:
-        for entity in object_sprites:
-            entity.move(ACC, fric)
-            P1.pos.x = 0.8*width
+    border_move(P1, object_sprites, width, ACC, fric) 
+
 
     ### Player movement
     P1.move(g, ACC, fric)
