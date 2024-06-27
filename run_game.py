@@ -1,6 +1,7 @@
 # Libraries
 import pygame
 from pygame.locals import *
+import sys
 from my_sprites.my_functions.logic import border_move
 from my_sprites.my_functions.read_graphics import level_reader
 from my_sprites.my_sprites import Player, Platform
@@ -40,12 +41,8 @@ while True:
                     P1.jump()
 
     displaysurface.fill((0,0,0))
-    ## Calculate forces
-    ### Screen Movement
+    ## Dynamics
     border_move(P1, object_sprites, width, ACC, fric) 
-
-
-    ### Player movement
     P1.move(g, ACC, fric)
     P1.update(object_sprites)
 
