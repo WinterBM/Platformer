@@ -16,7 +16,5 @@ def border_move(P1, object_sprites, width:int ,ACC, fric):
         P1.pos.x = 0.2*width
     if P1.pos.x > 0.8*width and pressed_keys[K_RIGHT]:
         for entity in object_sprites:
-            if P1.vel.x > ACC: entity.vel.x = -P1.vel.x
-            entity.move(ACC, fric, "right")
+            entity.rect.x -= P1.vel.x+0.5*P1.acc.x
         P1.pos.x = 0.8*width
-        P1.vel.x = 0
