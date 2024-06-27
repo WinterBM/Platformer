@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: Platformer
+Version: 0.0.1
+Summary: Platformer
+Author-email: Bastian Malte Winter <bastianmaltewinter39@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pygame>=2.5.2
+
+# Platformer
+Simple platformer implemented in Python and using the pygame libary.\
+Just playing around...
+
+## Installation and usage
+- Create conda environment:
+```
+conda env create -f env.yml
+```
+- Activate conda environment:
+```
+conda activate game_env
+```
+- Play:
+```
+python game.py
+```
+

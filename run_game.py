@@ -1,5 +1,9 @@
 # Libraries
-from sprites import *
+import pygame
+from pygame.locals import *
+from my_sprites.my_functions.logic import border_move
+from my_sprites.my_functions.read_graphics import level_reader
+from my_sprites.my_sprites import Player, Platform
 
 # Initiaze and set constants
 pygame.init()
