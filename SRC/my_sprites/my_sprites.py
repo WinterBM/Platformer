@@ -43,7 +43,7 @@ class Player(pygame.sprite.Sprite):
         """
         hits = pygame.sprite.spritecollide(self, sprite_group,
                                            False)
-        if hits:
+        if hits and self.vel.y > 0.5:
             self.pos.y = hits[0].rect.top+1
             self.vel.y = 0
         
