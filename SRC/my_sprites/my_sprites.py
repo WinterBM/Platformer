@@ -65,30 +65,3 @@ class Platform(pygame.sprite.Sprite):
         self.acc = vec(0,0)
         self.vel = vec(0,0)
         self.pos = vec(position)
-    
-    def move(self, ACC:float, fric:float, direction:str):
-        """
-        Implements movement of platform sprites
-
-        :param ACC float: acceleration
-        :param fric float: friction
-        :direction str: direction of movement
-        """
-                
-        ## Acceleration events
-        self.acc = vec(0,0)
-        if direction=="left":
-            self.acc.x = ACC
-        if direction=="right":
-            self.acc.x = -ACC
-        
-        ## Equations of motion
-        self.acc += self.vel * fric
-        self.vel += self.acc
-        self.pos += self.vel +0.5*self.acc
-        
-        self.rect.midbottom = self.pos
-
-    
-
-
