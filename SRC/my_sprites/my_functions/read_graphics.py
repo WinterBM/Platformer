@@ -7,8 +7,10 @@ def level_reader(path:str, all_sprites, object_sprites):
 
     :param path str: path to level txt file
     :param all_sprites : sprite group for all sprites
-    :param object_sprites [TODO:type]: sprite group for platform sprites
+    :param object_sprites : sprite group for platform sprites
     """
+    all_sprites.empty()
+    object_sprites.empty()
     with open(path, "r") as f:
         lines = f.readlines()
         for y, line in enumerate(lines):

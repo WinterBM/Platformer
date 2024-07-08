@@ -1,5 +1,6 @@
 import pygame
 from pygame.locals import *
+from  my_sprites.my_functions.read_graphics import level_reader
 
 def border_move(P1, object_sprites, width:int ,ACC, fric):
     """
@@ -20,3 +21,9 @@ def border_move(P1, object_sprites, width:int ,ACC, fric):
         for entity in object_sprites:
             entity.rect.x -= P1.vel.x+0.5*P1.acc.x
         P1.pos.x = 0.8*width
+
+def death(path, all_sprites, object_sprites, P1):
+    if P1.pos.y > 900:
+        level_reader(path, all_sprites, object_sprites)
+        P1.pos.x = 0
+        P1.pos.y = 200

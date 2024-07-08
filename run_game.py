@@ -2,7 +2,7 @@
 import pygame
 from pygame.locals import *
 import sys
-from my_sprites.my_functions.logic import border_move
+from my_sprites.my_functions.logic import border_move, death
 from my_sprites.my_functions.read_graphics import level_reader
 from my_sprites.my_sprites import Player, Platform
 
@@ -45,6 +45,7 @@ while True:
     border_move(P1, object_sprites, width, ACC, fric) 
     P1.move(g, ACC, fric)
     P1.update(object_sprites)
+    death("Levels/level1.txt", all_sprites, object_sprites, P1)
 
     ## Draw sprites
     for entity in all_sprites:
