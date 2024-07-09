@@ -24,6 +24,9 @@ def border_move(P1, object_sprites, width:int ,ACC, fric):
 
 def death(path, all_sprites, object_sprites, P1):
     if P1.pos.y > 900:
+        all_sprites.empty()
+        object_sprites.empty()
         level_reader(path, all_sprites, object_sprites)
+        all_sprites.add(P1)
         P1.pos.x = 0
         P1.pos.y = 200

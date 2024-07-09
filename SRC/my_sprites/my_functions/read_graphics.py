@@ -9,8 +9,6 @@ def level_reader(path:str, all_sprites, object_sprites):
     :param all_sprites : sprite group for all sprites
     :param object_sprites : sprite group for platform sprites
     """
-    all_sprites.empty()
-    object_sprites.empty()
     with open(path, "r") as f:
         lines = f.readlines()
         for y, line in enumerate(lines):
