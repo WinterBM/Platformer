@@ -1,4 +1,4 @@
-==Needs to be rewritten==
+=Needs to be rewritten=
 # Platformer
 Simple platformer implemented in Python and using the pygame libary.\
 Just playing around...
