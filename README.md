@@ -4,6 +4,8 @@ Simple platformer implemented in Python and using the pygame libary.\
 Just playing around...
 
 ## Installation and usage
+- Clone porject
+- cd into Platformer
 - Create conda environment:
 ```
 conda env create -f env.yml
