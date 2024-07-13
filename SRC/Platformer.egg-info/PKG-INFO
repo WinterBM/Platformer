@@ -7,6 +7,7 @@ Requires-Python: >=3.8
 Description-Content-Type: text/markdown
 Requires-Dist: pygame>=2.5.2
 
+=Needs to be rewritten=
 # Platformer
 Simple platformer implemented in Python and using the pygame libary.\
 Just playing around...

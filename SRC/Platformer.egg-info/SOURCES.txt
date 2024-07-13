@@ -5,7 +5,5 @@ SRC/Platformer.egg-info/SOURCES.txt
 SRC/Platformer.egg-info/dependency_links.txt
 SRC/Platformer.egg-info/requires.txt
 SRC/Platformer.egg-info/top_level.txt
-SRC/my_functions/__init__.py
-SRC/my_functions/logic.py
-SRC/my_functions/read_graphics.py
 SRC/my_sprites/__init__.py
+SRC/my_sprites/my_sprites.py

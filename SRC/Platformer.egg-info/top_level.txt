@@ -1,2 +1,1 @@
-my_functions
 my_sprites

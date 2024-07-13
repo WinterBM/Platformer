@@ -14,6 +14,8 @@ conda activate game_env
 ```
 - Play:
 ```
-python game.py
+python run_game.py
 ```
+To move use arrow keys.\
+To jump use space bar
 
