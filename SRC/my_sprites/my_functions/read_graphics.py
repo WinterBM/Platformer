@@ -1,7 +1,7 @@
 from my_sprites.my_sprites import Platform
 
 # Read graphics
-def level_reader(path:str, all_sprites, object_sprites):
+def level_reader(path:str, all_sprites, object_sprites, oscilating_sprites):
     """
     Reads level txt file and adds to aproriate sprite groups
 
@@ -17,3 +17,7 @@ def level_reader(path:str, all_sprites, object_sprites):
                     PT = Platform((x*50,y*50))
                     all_sprites.add(PT)
                     object_sprites.add(PT)
+                if pos == "-":
+                    PT = Platform((x*50,y*50))
+                    all_sprites.add(PT)
+                    oscilating_sprites.add(PT)

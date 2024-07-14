@@ -26,7 +26,7 @@ def death(path, all_sprites, object_sprites, P1):
     if P1.pos.y > 900:
         all_sprites.empty()
         object_sprites.empty()
-        level_reader(path, all_sprites, object_sprites)
+        level_reader(path, all_sprites, object_sprites, oscilating_sprites)
         all_sprites.add(P1)
         P1.pos.x = 0
         P1.pos.y = 200
