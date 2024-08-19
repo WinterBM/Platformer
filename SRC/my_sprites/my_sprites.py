@@ -64,17 +64,4 @@ class Platform(pygame.sprite.Sprite):
 
         self.acc = vec(0,0)
         self.vel = vec(0,0)
-        self.pos = vec(position)
-
-    def oscilate(self,ACC, fric):
-        if self.vel.x <= 0:
-            self.acc.x = ACC
-        elif self.vel.x > 20:
-            self.acc.x = -ACC
-
-        self.acc += self.vel * fric
-        self.vel += self.acc
-        self.pos += self.vel +0.5*self.acc
-        
-        self.rect.midbottom = self.pos
-
+        self.pos = vec(position) 

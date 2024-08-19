@@ -24,8 +24,7 @@ pygame.display.set_caption("Game")
 # Read levels
 all_sprites = pygame.sprite.Group()
 object_sprites = pygame.sprite.Group()
-oscilating_sprites = pygame.sprite.Group()
-level_reader("Levels/level1.txt", all_sprites, object_sprites, oscilating_sprites)
+level_reader("Levels/level1.txt", all_sprites, object_sprites)
 
 P1 = Player()
 all_sprites.add(P1)
@@ -42,15 +41,12 @@ while True:
                     P1.jump()
 
     displaysurface.fill((0,0,0))
+    
     ## Dynamics
     border_move(P1, object_sprites, width, ACC, fric) 
     P1.move(g, ACC, fric)
     P1.update(object_sprites)
-    P1.update(oscilating_sprites)
     death("Levels/level1.txt", all_sprites, object_sprites, P1)
-    
-    for osc in oscilating_sprites:
-        osc.oscilate(ACC, fric)
 
     ## Draw sprites
     for entity in all_sprites:
